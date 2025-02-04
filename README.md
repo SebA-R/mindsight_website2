@@ -4,7 +4,7 @@ Nuxt 3 Fullstack (SPA-SSR) app for a charity organization. Volunteer data is fet
 
 This is a sample project created using the [Vue Designer Nuxt Tailwind CSS - Quick start template](https://github.com/pinegrow/pg-nuxt-tailwindcss).
 
-Demo - https://mindsight-charity-with-nuxt-tailwindcss.netlify.app/
+Demo - https://mindsight-page.web.app/
 
 ## Vue Designer
 
