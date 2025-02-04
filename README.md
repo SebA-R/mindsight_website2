@@ -1,10 +1,10 @@
-# Happy Paws - Fullstack, SEO friendly, performant app with Nuxt & Tailwind CSS
+# Mindsight Charity - Fullstack, SEO friendly, performant app with Nuxt & Tailwind CSS
 
-Nuxt 3 Fullstack (SPA-SSR) app for an volunteer adoption organisation. Volunteer data is fetched via APIs served by server routes (Nitro-powered), statically generated articles fetched from an external REST API source, a blog authored with markdown files, and everything styled with the power and beauty of Tailwind CSS.
+Nuxt 3 Fullstack (SPA-SSR) app for a charity organization. Volunteer data is fetched via APIs served by server routes (Nitro-powered), statically generated articles fetched from an external REST API source, a blog authored with markdown files, and everything styled with the power and beauty of Tailwind CSS.
 
 This is a sample project created using the [Vue Designer Nuxt Tailwind CSS - Quick start template](https://github.com/pinegrow/pg-nuxt-tailwindcss).
 
-Demo - https://happy-paws-with-nuxt-tailwindcss.netlify.app/
+Demo - https://mindsight-charity-with-nuxt-tailwindcss.netlify.app/
 
 ## Vue Designer
 
@@ -20,15 +20,15 @@ Clean code 😃, No lock-in - You are in control of your projects and developmen
 
 ### 1. Clone to local
 
-[Create a repo from this template on GitHub](https://github.com/pinegrow/happy-paws-with-nuxt-tailwindcss/generate).
+[Create a repo from this template on GitHub](https://github.com/pinegrow/mindsight-charity-with-nuxt-tailwindcss/generate).
 
 (or)
 
 If you prefer to do it manually with the cleaner git history
 
 ```bash
-npx giget@latest gh:pinegrow/happy-paws-with-nuxt-tailwindcss my-happy-paws-with-nuxt-tailwindcss-app #project-name
-cd my-happy-paws-with-nuxt-tailwindcss-app
+npx giget@latest gh:pinegrow/mindsight-charity-with-nuxt-tailwindcss my-mindsight-charity-with-nuxt-tailwindcss-app #project-name
+cd my-mindsight-charity-with-nuxt-tailwindcss-app
 npm install #or use pnpm
 ```
 
@@ -72,7 +72,7 @@ npm run unlighthouse # Uses npx unlighthouse from https://unlighthouse.dev/ to r
 ### Deploy to Netlify
 
 You can deploy this repo as a site on your own to explore and experiment with, by clicking this button.
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Pinegrow/happy-paws-with-nuxt-tailwindcss)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Pinegrow/mindsight-charity-with-nuxt-tailwindcss)
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
 
