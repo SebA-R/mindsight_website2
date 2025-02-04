@@ -41,17 +41,6 @@
         <p class="dark:prose-invert prose prose-gray">
           {{ article.description }}
         </p>
-        <div class="font-semibold mt-4 text-xs">
-          <BaseButton
-            v-for="(tag, index) in article.tag_list"
-            :key="index"
-            class="mb-1 mr-1"
-            size="xs"
-            color="secondary"
-            @click="fetchTag(tag)"
-            >{{ tag }}</BaseButton
-          >
-        </div>
       </div>
       <div class="bg-primary-500">
         <div

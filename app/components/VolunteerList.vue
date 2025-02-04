@@ -1,11 +1,11 @@
 <script setup lang="ts">
-  const { allPets: pets } = await usePets()
+  const { allVolunteers: volunteers } = await useVolunteers()
 </script>
 <template>
   <div>
     <div class="container mx-auto px-4 relative">
       <div class="flex flex-wrap -mx-4 justify-center">
-        <PetCard v-for="(pet, index) in pets" v-bind="pet" :key="index" class />
+        <VolunteerCard v-for="(volunteer, index) in volunteers" v-bind="volunteer" :key="index" class />
       </div>
     </div>
   </div>
