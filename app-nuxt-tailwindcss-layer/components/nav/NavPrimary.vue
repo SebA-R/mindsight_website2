@@ -28,15 +28,11 @@
     </div>
     <BaseButton
       class="ml-3"
-      target="_blank"
-      to="https://vuedesigner.com"
+      to="/volunteer"
       size="xl"
       color="secondary"
     >
-      <span class="pl-2">Try Now</span>
-      <template #trailing>
-        <BaseIcon name="i-mdi-pine-tree" height="24px" />
-      </template>
+      <span class="pl-2">Get Involved</span>
     </BaseButton>
   </div>
 </template>

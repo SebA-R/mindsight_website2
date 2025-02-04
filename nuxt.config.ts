@@ -10,7 +10,6 @@ const {
   url,
   defaultLocale,
   identity,
-  twitter,
   trailingSlash,
   titleSeparator,
 } = site
@@ -159,6 +158,7 @@ export default defineNuxtConfig({
       'res.cloudinary.com',
       'avatars.githubusercontent.com',
       'gravatar.com',
+      'images.pexels.com'
     ],
 
     alias: {
@@ -238,7 +238,6 @@ export default defineNuxtConfig({
     defaultLocale,
     // https://nuxtseo.com/nuxt-seo/guides/setting-an-identity
     identity,
-    twitter,
     trailingSlash,
     titleSeparator,
   },

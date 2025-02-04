@@ -18,7 +18,7 @@
 
   const { data: article } = await useAsyncData(articleId, async () => {
     const { getArticle } = useArticles()
-    return await getArticle(+articleId)
+    return await getArticle(articleId)
   })
 
   useServerSeoMeta({

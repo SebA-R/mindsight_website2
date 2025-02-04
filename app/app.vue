@@ -5,7 +5,7 @@
   // import { useSiteConfig } from '#imports'
   // const siteConfig = useSiteConfig()
 
-  const { name, logo, description, author, twitter } = site
+  const { name, logo, description, author } = site
   const fromBg = secondary
   const toBg = primary
 
@@ -19,7 +19,6 @@
     // image: '~/assets/images/hero1.jpg',
     logo,
     author,
-    twitter,
   }
 
   // https://nuxtseo.com/schema-org/guides/quick-setup

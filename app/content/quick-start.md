@@ -1,6 +1,6 @@
 # Happy Paws - Fullstack, SEO friendly, performant app with Nuxt & Tailwind CSS
 
-Nuxt 3 Fullstack (SPA-SSR) app for an pet adoption organisation. Pet data is fetched via APIs served by server routes (Nitro-powered), statically generated articles fetched from an external REST API source, a blog authored with markdown files, and everything styled with the power and beauty of Tailwind CSS.
+Nuxt 3 Fullstack (SPA-SSR) app for an volunteer adoption organisation. Volunteer data is fetched via APIs served by server routes (Nitro-powered), statically generated articles fetched from an external REST API source, a blog authored with markdown files, and everything styled with the power and beauty of Tailwind CSS.
 
 This is a sample project created using the [Vue Designer Nuxt Tailwind CSS - Quick start template](https://github.com/pinegrow/pg-nuxt-tailwindcss).
 

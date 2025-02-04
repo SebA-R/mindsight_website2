@@ -1,45 +1,316 @@
-import { $fetch } from 'ofetch'
-import type { Article, Articles, State } from '~~/types'
+import type { Article, User, Organisation, FlareTag, State } from '~~/types'
+import { ref } from 'vue'
 
-// const apiBaseUrl = 'http://localhost:3001'
-const apiBaseUrl = 'https://dev.to/api'
+const articles = ref<Article[]>([
+  {
+    type_of: 'article',
+    id: '1',
+    title: 'Non-Pharmacological Treatments for Dementia',
+    description: 'An overview of non-pharmacological treatments for dementia.',
+    readable_publish_date: 'September 2014',
+    slug: 'non-pharmacological-treatments-dementia',
+    path: '/articles/non-pharmacological-treatments-dementia',
+    url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4185370/',
+    comments_count: '0',
+    public_reactions_count: '0',
+    collection_id: null,
+    published_timestamp: '2014-09-01T00:00:00Z',
+    positive_reactions_count: '0',
+    cover_image: 'https://example.com/cover-image-1.jpg',
+    social_image: 'https://example.com/social-image-1.jpg',
+    canonical_url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4185370/',
+    created_at: '2014-09-01T00:00:00Z',
+    edited_at: null,
+    crossposted_at: null,
+    published_at: '2014-09-01T00:00:00Z',
+    last_comment_at: null,
+    reading_time_minutes: '5',
+    tag_list: 'dementia, treatment',
+    tags: 'dementia, treatment',
+    user: {
+      name: 'David S Knopman et al.',
+      username: 'johndoe',
+      twitter_username: 'johndoe123',
+      github_username: 'johndoe',
+      user_id: '101',
+      website_url: 'https://johndoe.com',
+      profile_image: 'https://example.com/profile-image.jpg',
+      profile_image_90: 'https://example.com/profile-image-90.jpg',
+    },
+    organisation: {
+      name: 'Placeholder Organisation',
+      username: 'placeholder_org',
+      slug: 'placeholder-org',
+      profile_image: 'https://example.com/org-profile.jpg',
+      profile_image_90: 'https://example.com/org-profile-90.jpg',
+    },
+    flare_tag: {
+      name: 'Featured',
+      bg_color_hex: '#FFD700',
+      text_color_hex: '#000000',
+    },
+  },
+  {
+    type_of: 'article',
+    id: '2',
+    title: 'Therapy for Dementia Patients',
+    description: 'Exploring various therapy options for dementia patients.',
+    readable_publish_date: 'September 2018',
+    slug: 'therapy-for-dementia-patients',
+    path: '/articles/therapy-for-dementia-patients',
+    url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6140014/',
+    comments_count: '0',
+    public_reactions_count: '0',
+    collection_id: null,
+    published_timestamp: '2018-09-01T00:00:00Z',
+    positive_reactions_count: '0',
+    cover_image: 'https://example.com/cover-image-2.jpg',
+    social_image: 'https://example.com/social-image-2.jpg',
+    canonical_url: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6140014/',
+    created_at: '2018-09-01T00:00:00Z',
+    edited_at: null,
+    crossposted_at: null,
+    published_at: '2018-09-01T00:00:00Z',
+    last_comment_at: null,
+    reading_time_minutes: '7',
+    tag_list: 'dementia, therapy',
+    tags: 'dementia, therapy',
+    user: {
+      name: 'Marla Berg-Weger et al.',
+      username: 'janesmith',
+      twitter_username: 'janesmith123',
+      github_username: 'janesmith',
+      user_id: '102',
+      website_url: 'https://janesmith.com',
+      profile_image: 'https://example.com/profile-image-2.jpg',
+      profile_image_90: 'https://example.com/profile-image-90-2.jpg',
+    },
+    organisation: {
+      name: 'Another Organisation',
+      username: 'another_org',
+      slug: 'another-org',
+      profile_image: 'https://example.com/org-profile-2.jpg',
+      profile_image_90: 'https://example.com/org-profile-90-2.jpg',
+    },
+    flare_tag: {
+      name: 'Tutorial',
+      bg_color_hex: '#FF5733',
+      text_color_hex: '#FFFFFF',
+    },
+  },
+  {
+    type_of: 'article',
+    id: '3',
+    title: 'Non-Pharmacological Treatments for Dementia',
+    description: 'An overview of non-pharmacological treatments for dementia.',
+    readable_publish_date: 'January 2024',
+    slug: 'non-pharmacological-treatments-dementia',
+    path: '/articles/non-pharmacological-treatments-dementia',
+    url: 'https://www.dementia.org.au/professionals/treatment-and-management-dementia/non-pharmacological-treatments-dementia',
+    comments_count: '0',
+    public_reactions_count: '0',
+    collection_id: null,
+    published_timestamp: '2024-01-01T00:00:00Z',
+    positive_reactions_count: '0',
+    cover_image: 'https://example.com/cover-image-3.jpg',
+    social_image: 'https://example.com/social-image-3.jpg',
+    canonical_url: 'https://www.dementia.org.au/professionals/treatment-and-management-dementia/non-pharmacological-treatments-dementia',
+    created_at: '2024-01-01T00:00:00Z',
+    edited_at: null,
+    crossposted_at: null,
+    published_at: '2024-01-01T00:00:00Z',
+    last_comment_at: null,
+    reading_time_minutes: '5',
+    tag_list: 'dementia, treatment',
+    tags: 'dementia, treatment',
+    user: {
+      name: 'Dementia Australia',
+      username: 'johndoe',
+      twitter_username: 'johndoe123',
+      github_username: 'johndoe',
+      user_id: '101',
+      website_url: 'https://johndoe.com',
+      profile_image: 'https://example.com/profile-image.jpg',
+      profile_image_90: 'https://example.com/profile-image-90.jpg',
+    },
+    organisation: {
+      name: 'Placeholder Organisation',
+      username: 'placeholder_org',
+      slug: 'placeholder-org',
+      profile_image: 'https://example.com/org-profile.jpg',
+      profile_image_90: 'https://example.com/org-profile-90.jpg',
+    },
+    flare_tag: {
+      name: 'Featured',
+      bg_color_hex: '#FFD700',
+      text_color_hex: '#000000',
+    },
+  },
+  {
+    type_of: 'article',
+    id: '4',
+    title: 'Cognitive Exercises for Post-Concussion Syndrome',
+    description: 'Effective cognitive exercises for managing post-concussion syndrome.',
+    readable_publish_date: 'June 2023',
+    slug: 'cognitive-exercises-post-concussion-syndrome',
+    path: '/articles/cognitive-exercises-post-concussion-syndrome',
+    url: 'https://www.mdpi.com/2308-3417/9/2/52',
+    comments_count: '0',
+    public_reactions_count: '0',
+    collection_id: null,
+    published_timestamp: '2023-06-01T00:00:00Z',
+    positive_reactions_count: '0',
+    cover_image: 'https://example.com/cover-image-4.jpg',
+    social_image: 'https://example.com/social-image-4.jpg',
+    canonical_url: 'https://www.mdpi.com/2308-3417/9/2/52',
+    created_at: '2023-06-01T00:00:00Z',
+    edited_at: null,
+    crossposted_at: null,
+    published_at: '2023-06-01T00:00:00Z',
+    last_comment_at: null,
+    reading_time_minutes: '5',
+    tag_list: 'concussion, cognitive exercises',
+    tags: 'concussion, cognitive exercises',
+    user: {
+      name: 'Huong Thu Vu et al',
+      username: 'johndoe',
+      twitter_username: 'johndoe123',
+      github_username: 'johndoe',
+      user_id: '101',
+      website_url: 'https://johndoe.com',
+      profile_image: 'https://example.com/profile-image.jpg',
+      profile_image_90: 'https://example.com/profile-image-90.jpg',
+    },
+    organisation: {
+      name: 'Placeholder Organisation',
+      username: 'placeholder_org',
+      slug: 'placeholder-org',
+      profile_image: 'https://example.com/org-profile.jpg',
+      profile_image_90: 'https://example.com/org-profile-90.jpg',
+    },
+    flare_tag: {
+      name: 'Featured',
+      bg_color_hex: '#FFD700',
+      text_color_hex: '#000000',
+    },
+  },
+  {
+    type_of: 'article',
+    id: '5',
+    title: 'Therapy for Dementia Patients',
+    description: 'Exploring various therapy options for dementia patients.',
+    readable_publish_date: 'January 2024',
+    slug: 'therapy-for-dementia-patients',
+    path: '/articles/therapy-for-dementia-patients',
+    url: 'https://neuraleffects.com/blog/therapy-for-dementia-patients/',
+    comments_count: '0',
+    public_reactions_count: '0',
+    collection_id: null,
+    published_timestamp: '2024-01-01T00:00:00Z',
+    positive_reactions_count: '0',
+    cover_image: 'https://example.com/cover-image-5.jpg',
+    social_image: 'https://example.com/social-image-5.jpg',
+    canonical_url: 'https://neuraleffects.com/blog/therapy-for-dementia-patients/',
+    created_at: '2024-01-01T00:00:00Z',
+    edited_at: null,
+    crossposted_at: null,
+    published_at: '2024-01-01T00:00:00Z',
+    last_comment_at: null,
+    reading_time_minutes: '5',
+    tag_list: 'dementia, therapy',
+    tags: 'dementia, therapy',
+    user: {
+      name: 'Neural Effects',
+      username: 'johndoe',
+      twitter_username: 'johndoe123',
+      github_username: 'johndoe',
+      user_id: '101',
+      website_url: 'https://johndoe.com',
+      profile_image: 'https://example.com/profile-image.jpg',
+      profile_image_90: 'https://example.com/profile-image-90.jpg',
+    },
+    organisation: {
+      name: 'Placeholder Organisation',
+      username: 'placeholder_org',
+      slug: 'placeholder-org',
+      profile_image: 'https://example.com/org-profile.jpg',
+      profile_image_90: 'https://example.com/org-profile-90.jpg',
+    },
+    flare_tag: {
+      name: 'Featured',
+      bg_color_hex: '#FFD700',
+      text_color_hex: '#000000',
+    },
+  },
+  {
+    type_of: 'article',
+    id: '6',
+    title: 'Cognitive Exercises for Post-Concussion Syndrome',
+    description: 'Effective cognitive exercises for managing post-concussion syndrome.',
+    readable_publish_date: 'January 2024',
+    slug: 'cognitive-exercises-post-concussion-syndrome',
+    path: '/articles/cognitive-exercises-post-concussion-syndrome',
+    url: 'https://www.cognitivefxusa.com/blog/cognitive-exercises-for-post-concussion-syndrome',
+    comments_count: '0',
+    public_reactions_count: '0',
+    collection_id: null,
+    published_timestamp: '2024-01-01T00:00:00Z',
+    positive_reactions_count: '0',
+    cover_image: 'https://example.com/cover-image-6.jpg',
+    social_image: 'https://example.com/social-image-6.jpg',
+    canonical_url: 'https://www.cognitivefxusa.com/blog/cognitive-exercises-for-post-concussion-syndrome',
+    created_at: '2024-01-01T00:00:00Z',
+    edited_at: null,
+    crossposted_at: null,
+    published_at: '2024-01-01T00:00:00Z',
+    last_comment_at: null,
+    reading_time_minutes: '5',
+    tag_list: 'concussion, cognitive exercises',
+    tags: 'concussion, cognitive exercises',
+    user: {
+      name: 'Dr. Alina Fong',
+      username: 'johndoe',
+      twitter_username: 'johndoe123',
+      github_username: 'johndoe',
+      user_id: '101',
+      website_url: 'https://johndoe.com',
+      profile_image: 'https://example.com/profile-image.jpg',
+      profile_image_90: 'https://example.com/profile-image-90.jpg',
+    },
+    organisation: {
+      name: 'Placeholder Organisation',
+      username: 'placeholder_org',
+      slug: 'placeholder-org',
+      profile_image: 'https://example.com/org-profile.jpg',
+      profile_image_90: 'https://example.com/org-profile-90.jpg',
+    },
+    flare_tag: {
+      name: 'Featured',
+      bg_color_hex: '#FFD700',
+      text_color_hex: '#000000',
+    },
+  },
+])
 
-const articles = ref([])
-
-// https://developers.forem.com/api/v1#tag/articles/operation/getArticles
-export function fetchArticles(
-  url: string,
-  params: Record<string, string | number | undefined> = {},
-): Promise<any> {
-  return $fetch(url, {
-    baseURL: `${apiBaseUrl}/articles`,
-    params,
-  })
-}
-
-export const username = ref('')
-export const tag = ref('vue')
+export const username = ref('placeholder_username')
+export const tag = ref('placeholder_tag')
 
 export async function listArticles(
-  tags: string | string[] = [],
-  state: State = 'fresh',
+  tags: string | string[] = ['placeholder_tag1', 'placeholder_tag2'],
+  state: State = 'fresh', // Use a valid value from the State type
   page: number = 1,
   per_page: number = 10,
-): Promise<Articles> {
-  // username?: string,
-  // tag: string = 'vue',
-
-  tags = typeof tags === 'string' ? [tags] : tags
-  tags = tags.join(',')
-  const params = username.value
-    ? { username: username.value, state }
-    : { username: username.value, tag: tag.value, tags, state, page, per_page }
-  articles.value = await fetchArticles('', params)
+): Promise<Article[]> {
   return articles.value
 }
 
-export function getArticle(id: number): Promise<Article> {
-  return fetchArticles(`/${id}`)
+export function getArticle(id: string): Promise<Article> {
+  const article = articles.value.find(article => article.id === id)
+  if (article) {
+    return Promise.resolve(article)
+  } else {
+    return Promise.reject(new Error('Article not found'))
+  }
 }
 
 export const useArticles = () => {

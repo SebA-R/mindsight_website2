@@ -3,21 +3,18 @@
     <div class="-mx-4 flex flex-wrap items-center">
       <div class="p-4 w-full lg:w-6/12">
         <NuxtImg
-          src="https://images.unsplash.com/photo-1528301725143-1ba694832e77?ixid=MnwyMDkyMnwwfDF8c2VhcmNofDExfHxraWRzJTIwYW5pbWFsfGVufDB8fHx8MTYzMDQ2NTQwOQ&ixlib=rb-1.2.1q=85&fm=jpg&crop=faces&cs=srgb&w=1000&h=650&fit=crop"
-          class="rounded-3xl w-full"
-          alt="Our Mission"
-        />
+          src="https://images.pexels.com/photos/1642883/pexels-photo-1642883.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          class="rounded-3xl w-full" alt="Our Mission" />
       </div>
       <div class="mx-auto p-4 w-full lg:w-5/12">
         <h6 class="mb-2 text-primary-600 dark:text-primary-200 uppercase">
           Our Mission
         </h6>
         <h3 class="capitalize mb-2">
-          Life changing experience for a valuable cause
+          Evidence-based cognitive therapy for seniors
         </h3>
         <p class="mb-6">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-          pulvinar faucibus neque, nec rhoncus nunc ultrices sit amet.
+          Cognitive Stimulation Therapies are derived from literature and vetted by experts before delivery to clients. They are adapted by multilingual members to different languages.
         </p>
         <BaseButton size="xl" to="/articles"> Learn More </BaseButton>
       </div>

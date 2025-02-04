@@ -1,19 +1,19 @@
 <script setup lang="ts">
   const callToActions = [
     {
-      img: 'https://images.unsplash.com/photo-1585664811087-47f65abbad64?ixid=MnwyMDkyMnwwfDF8c2VhcmNofDEwfHxkb2clMjBob3VzZXxlbnwwfHx8fDE2MzA0NjM2Mzg&ixlib=rb-1.2.1q=85&fm=jpg&crop=faces&cs=srgb&w=900&h=1000&fit=crop',
-      action: 'Adopt',
-      to: '/adopt',
+      img: 'https://images.pexels.com/photos/339620/pexels-photo-339620.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop',
+      action: 'Learn More',
+      to: '/about',
     },
     {
-      img: 'https://images.unsplash.com/photo-1499946682598-202f5b527154?ixid=MnwyMDkyMnwwfDF8c2VhcmNofDkzfHxmZWVkJTIwaGFtc3RlcnxlbnwwfHx8fDE2MzA0NjQ1Mzc&ixlib=rb-1.2.1q=85&fm=jpg&crop=faces&cs=srgb&w=900&h=1000&fit=crop',
+      img: 'https://images.pexels.com/photos/3768114/pexels-photo-3768114.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       action: 'Volunteer',
       to: '/volunteer',
     },
     {
-      img: 'https://images.unsplash.com/photo-1415369629372-26f2fe60c467?ixid=MnwyMDkyMnwwfDF8c2VhcmNofDR8fHBldHxlbnwwfHx8fDE2MzA0NjI1MjM&ixlib=rb-1.2.1q=85&fm=jpg&crop=faces&cs=srgb&w=900&h=1000&fit=crop',
+      img: 'https://images.pexels.com/photos/302083/pexels-photo-302083.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1 ',
       action: 'Donate',
-      to: '/quick-start',
+      to: '/donate',
     },
   ]
 </script>
@@ -27,7 +27,7 @@
         Small gesture for a big impact
       </h3>
       <p class="mt-4 text-center">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Bridging Dementia Care Inequities. Merging Innovation and Community Service.
       </p>
     </div>
     <div class="-mx-4 flex flex-wrap justify-center mt-12">

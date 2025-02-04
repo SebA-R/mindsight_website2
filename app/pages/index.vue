@@ -6,7 +6,7 @@
     // name: 'index',
     // alias: 'index',
     title: 'Home',
-    description: 'Thousands of homeless pets, one act of kindness!',
+    description: 'Thousands of volunteers, one act of kindness!',
     navOrder: 1,
     type: 'primary',
     icon: 'i-mdi-home',
@@ -36,7 +36,6 @@
     <CallToAction />
     <MiniDivider />
     <OurMission />
-    <PetListLite />
     <StatsSection />
   </div>
 </template>
